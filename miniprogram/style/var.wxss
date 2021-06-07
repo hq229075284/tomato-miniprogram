@@ -1,0 +1,6 @@
+page{
+    --red:#d81e06;
+    /* --border-color:#DCDCDC; */
+    --border-color:#e4e8eb;
+    --label-color:#484848;
+}

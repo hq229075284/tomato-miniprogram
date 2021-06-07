@@ -1,0 +1,40 @@
+/* miniprogram/pages/task/task.wxss */
+
+.header{
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;left: 0;width: 100%;
+    background-color: #fff;
+}
+.header .iconfont{
+    font-size: 72rpx;
+    width: 100rpx;
+    text-align: center;
+}
+
+.task-list{
+    margin-top:100rpx;
+    background-color: #fff;
+    /* padding: 0 40rpx; */
+}
+
+.task-list .task{
+    padding: 16rpx 32rpx;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+}
+
+.task-list .task checkbox{
+    flex:0 0 auto;
+    margin-right: 10px;
+}
+.task-list .task text{
+    flex:1 1 auto;
+    word-break: break-all;
+    font-size: 26rpx;
+}

@@ -1,0 +1,70 @@
+/* miniprogram/pages/taskInfo/taskInfo.wxss */
+
+.subTask-title{
+    color:#878787;
+    margin-left: 20rpx;
+}
+.subTask-list{
+}
+.subTask-list .subTask{
+    padding: 16rpx 0 16rpx 20rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1rpx solid var(--border-color);
+}
+.subTask-list .subTask > checkbox{
+    flex: 0 0 auto;
+    margin-right: 10rpx;
+}
+.subTask-list .subTask > view{
+    flex:1 1 auto;
+}
+.subTask-list .new,.remark{
+    padding: 16rpx 0 16rpx 20rpx;
+    border-bottom: 1rpx solid var(--border-color);
+}
+
+.plan-tomato{
+    margin-top: 32rpx;
+}
+
+hr{
+    display: block;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.content input{
+    font-size:28rpx;border:1px solid var(--border-color);padding:4rpx 8rpx;border-radius:2px;
+}
+
+.buttons{
+    margin:0 -16rpx;
+}
+.buttons .button{
+    color:var(--red);
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    border-top:1px solid var(--border-color);
+    padding:8rpx;
+}
+
+.buttons .button:first-child{
+    border-right:1px solid var(--border-color);
+}
+
+.save-button{
+    background-color: #6caced;
+    color:#fff;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

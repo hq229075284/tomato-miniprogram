@@ -1,0 +1,38 @@
+<!-- miniprogram/pages/taskInfo/taskInfo.wxml -->
+<view class="mb32">
+    <setting-row renderBottomLine='{{false}}'>
+        <text slot="label">任务名</text>
+        <view slot="content">
+            <input value="{{taskTree.name}}" bind:input="onChangeMainTaskName"/>
+        </view>
+    </setting-row>
+    <hr />
+</view>
+<text class="subTask-title">子任务</text>
+<view class="subTask-list mb32">
+    <view wx:for="{{taskTree.children}}" wx:for-item="subTask" wx:key="id" class="subTask">
+        <!-- <checkbox checked="{{true}}" data-id="{{subTask.id}}"></checkbox> -->
+        <view>{{subTask.name}}</view>
+    </view>
+    <input class="new" type="text" value="{{newSubTaskName}}" placeholder="添加子任务" bindconfirm="addNewSubTask" bindinput="editNewSubTask"/>
+</view>
+<view class="mb32">
+    <setting-row bind:tapContent="openDialog" renderBottomLine="{{false}}">
+        <text slot="label">预计番茄钟</text>
+        <view slot="content" style="flex: 1;">{{taskTree.turnNum}}</view>
+    </setting-row>
+    <hr />
+</view>
+<input type="text" placeholder="备注" bindinput="saveRemark" class="remark" />
+<button class="save-button" bind:tap="onSaveTask"><text>保存</text></button>
+<!-- 输入型弹框 -->
+<dialog isShow="{{isShowDialog}}" bind:cancel="onCancel">
+    <text slot="header">{{dialogTitle}}</text>
+    <view slot="main" class="content">
+        <input type="number" bindblur="onChangeInput" placeholder="请输入番茄钟个数" value="{{nextTurnNum}}"/>
+    </view>
+    <view slot='footer' class="buttons">
+        <view class="button" bind:tap="onCancel">取消</view>
+        <view class="button" bind:tap="onSave">保存</view>
+    </view>
+</dialog>

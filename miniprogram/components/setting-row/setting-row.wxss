@@ -1,0 +1,31 @@
+/* components/setting-row.wxss */
+@import '../../style/var.wxss';
+
+.row{
+    /* height:48rpx; */
+    display: flex;
+    justify-content:space-between;
+    background-color: #fff;
+    margin-left: 20rpx;
+}
+.row.line{
+    border-bottom:1px solid var(--border-color);
+}
+.row > .label{
+    color:var(--label-color);
+    font-size: 36rpx;
+    margin-left: -20rpx;
+    padding-left:20rpx;
+    background-color: #fff;
+    line-height: 2;
+    flex:0 0 auto;
+    align-self: center;
+}
+.row > .content{
+    margin-right: 20rpx;
+    flex:0 0 400rpx;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+}

@@ -1,0 +1,17 @@
+/* components/checkbox/checkbox.wxss */
+@import '../../style/var.wxss';
+
+.checkbox-component{
+    width: 28rpx;
+    height: 28rpx;
+    border: 2rpx solid var(--border-color);
+    border-radius: 2px;
+    display: inline-block;
+}
+.checkbox-component .fill{
+    width: 24rpx;
+    height: 24rpx;
+    margin: 2rpx;
+    background-color: var(--red);
+    border-radius: 2px;
+}

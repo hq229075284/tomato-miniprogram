@@ -1,0 +1,47 @@
+/* components/dialog/dialog.wxss */
+@import '../../style/var.wxss';
+
+.mark{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dialog{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 400rpx;
+    min-height: 50rpx;
+    margin-left: -200rpx;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px #999;
+    background-color: #fff;
+    padding:16rpx 16rpx 0;
+    z-index: 11;
+}
+
+.dialog .header{
+    color:var(--red);
+    text-align: center;
+    margin-bottom: 32rpx;
+}
+.dialog .main{
+    margin-bottom: 32rpx;
+}
+
+/* .dialog .footer .default-buttons{
+}
+.dialog .footer .default-buttons .button{
+    color:#f00;
+    width: 50%;
+    box-sizing: border-box;
+}
+.dialog .footer .default-buttons .button:first-child{
+    border-right:1px solid #999;
+} */

@@ -1,0 +1,19 @@
+function timeFormat(timestamp) {
+    var hour = 60 * 60 * 1000
+    var minute = 60 * 1000
+    var second = 1000
+    var h = timestamp / hour
+    var m = timestamp / minute
+    var s = timestamp / second
+    if (h > 1) {
+        return (Math.floor(h) === h ? h : h.toFixed(1)) + '小时'
+    }
+    if (m > 1) {
+        return (Math.floor(m) === m ? m : m.toFixed(1)) + '分钟'
+    }
+    return Math.floor(s) + '秒'
+}
+
+module.exports = {
+    timeFormat: timeFormat
+}

@@ -1,0 +1,4 @@
+<!--components/checkbox/checkbox.wxml-->
+<view class="checkbox-component">
+    <view class="fill" wx:if="{{checked}}"></view>
+</view>

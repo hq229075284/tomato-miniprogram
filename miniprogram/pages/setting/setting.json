@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "setting-row": "../../components/setting-row/setting-row",
+    "dialog": "../../components/dialog/dialog"
+  }
+}

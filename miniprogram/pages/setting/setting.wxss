@@ -1,0 +1,35 @@
+/* miniprogram/pages/setting/setting.wxss */
+@import '../../style/var.wxss';
+
+.category-name{
+    font-size: 36rpx;
+    line-height: 1.5;
+    margin-left: 20rpx;
+    color:#878787;
+}
+.category-content{
+    padding-bottom: 36rpx;
+}
+
+.dialog{}
+.dialog .title{}
+.dialog .content input{
+    font-size:28rpx;border:1px solid #e4e8eb;padding:4rpx 8rpx;border-radius:2px;
+}
+
+.dialog .buttons{
+    margin:0 -16rpx;
+}
+.dialog .buttons .button{
+    color:var(--red);
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    border-top:1px solid #e4e8eb;
+    padding:8rpx;
+}
+
+.dialog .buttons .button:first-child{
+    border-right:1px solid #e4e8eb;
+}

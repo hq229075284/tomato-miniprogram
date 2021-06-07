@@ -1,0 +1,15 @@
+<!-- components/dialog/dialog.wxml -->
+<view wx:if="{{isShow}}">
+    <view class="mark" bind:tap="onCancel"></view>
+    <view class="dialog">
+        <view class="header">
+            <slot name="header">{{title}}</slot>
+        </view>
+        <view class="main">
+            <slot name="main"></slot>
+        </view>
+        <view class="footer">
+            <slot name="footer"></slot>
+        </view>
+    </view>
+</view>

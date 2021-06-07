@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import './iconfont.wxss';
+
+page{
+  background-color: #f7f7fa;
+}
+.mb32{
+  margin-bottom: 32rpx;
+}

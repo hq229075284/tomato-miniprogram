@@ -1,0 +1,32 @@
+/* miniprogram/pages/index/index.wxss */
+@import '../../style/var.wxss';
+
+.canvas-container{
+    padding:100rpx 0;
+}
+.canvas-container.processing{
+    background-color: #fb624b;
+}
+.canvas-container.rest{
+    background-color: #56da15;
+}
+
+.task-list{
+    box-shadow: 0 -2rpx 8rpx rgba(131, 131, 131, 0.1);
+    border-top: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+.task-list .task{
+    padding: 16rpx 32rpx;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+}
+
+.task-list .task text{
+    flex:1 1 auto;
+    word-break: break-all;
+    font-size: 26rpx;
+}

@@ -1,0 +1,59 @@
+<!-- miniprogram/pages/setting/setting.wxml -->
+<wxs module="tool" src="../../util/tool.wxs"></wxs>
+<view class="setting">
+    <label class="category-name">音效</label>
+    <view class="category-content">
+        <setting-row>
+            <text slot='label'>播放提示音效</text>
+            <switch slot='content' checked="{{settings.isOpenTipSoundEffect}}" bindchange="setTipSoundEffect" color="{{switchColor}}" />
+        </setting-row>
+        <setting-row>
+            <text slot='label'>工作音效</text>
+            <switch slot='content' checked="{{settings.workingSoundEffect}}" bindchange="setWorkingSoundEffect" color="{{switchColor}}" />
+        </setting-row>
+    </view>
+    <label class="category-name">番茄</label>
+    <view class="category-content">
+        <setting-row>
+            <text slot='label'>番茄时长</text>
+            <view slot='content' bind:tap="toggleShowDialog" data-fn-name="setTurnTime">
+                {{tool.timeFormat(settings.turnTime)}}
+            </view>
+        </setting-row>
+        <setting-row>
+            <text slot='label'>休息时长</text>
+            <view slot='content' bind:tap="toggleShowDialog" data-fn-name="setRestTime">
+                {{tool.timeFormat(settings.restTime)}}
+            </view>
+        </setting-row>
+        <setting-row>
+            <text slot='label'>长休息时长</text>
+            <view slot='content' bind:tap="toggleShowDialog" data-fn-name="setLongRestTime">
+                {{tool.timeFormat(settings.longRestTime)}}
+            </view>
+        </setting-row>
+        <setting-row>
+            <text slot='label'>长休息间隔</text>
+            <view slot='content' bind:tap="toggleShowDialog" data-fn-name="setLongRestInterval">
+                {{settings.longRestInterval}}
+            </view>
+        </setting-row>
+    </view>
+    <label class="category-name">界面</label>
+    <view class="category-content">
+        <setting-row>
+            <text slot='label'>暗色主题</text>
+            <switch slot='content' checked="{{settings.isDark}}" bindchange="setDarkTheme" color="{{switchColor}}" />
+        </setting-row>
+    </view>
+    <dialog class="dialog" isShow="{{isShowDialog}}" bind:cancel="toggleShowDialog">
+        <text slot="header" class="title">{{dialogTitle}}</text>
+        <view slot="main" class="content">
+            <input type="text" value="{{inputValue}}" bindinput="onChangeDialogInput" placeholder="请输入时长(分)" auto-focus="{{true}}"/>
+        </view>
+        <view slot='footer' class="buttons">
+            <view class="button" bind:tap="toggleShowDialog">取消</view>
+            <view class="button" bind:tap="onSave">保存</view>
+        </view>
+    </dialog>
+</view>

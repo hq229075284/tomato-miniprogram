@@ -1,0 +1,9 @@
+<!-- components/setting-row.wxml -->
+<view class="{{renderBottomLine? 'row line':'row'}}">
+    <view class="label">
+        <slot name="label"></slot>
+    </view>
+    <view class="content" bind:tap="onTapContent">
+        <slot name="content"></slot>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<!-- miniprogram/pages/task/task.wxml -->
+<wxs module="tool">
+function includes(arr,item){
+    return !!~arr.indexOf(item)
+}
+module.exports = {
+  includes:includes
+};
+</wxs>
+<view class="header">
+    <view class="iconfont"></view>
+    <view class="iconfont iconadd-fill" bind:tap="newTask"></view>
+</view>
+<view class="task-list">
+    <view class="task" wx:for="{{taskList}}" wx:for-item="task" wx:key="id" >
+        <checkbox checked="{{tool.includes(checkedTasks,task.id)}}" bind:tap="toggleCheckTask" data-id="{{task.id}}"/>
+        <text class="task-name">{{task.name}}</text>
+    </view>
+</view>

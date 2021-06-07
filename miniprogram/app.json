@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/clock/index",
+    "pages/taskList/taskList",
+    "pages/setting/setting",
+    "pages/taskInfo/taskInfo"
+  ],
+  "window": {
+    "backgroundColor": "#f7f7fa",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4e82df",
+    "navigationBarTitleText": "韩式番茄钟",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#878787",
+    "selectedColor": "#d81e06",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "current": 0,
+        "pagePath": "pages/taskList/taskList",
+        "iconPath": "images/task-profile.png",
+        "selectedIconPath": "images/task-fill.png",
+        "text": "任务"
+      },
+      {
+        "current": 1,
+        "pagePath": "pages/clock/index",
+        "iconPath": "images/clock-profile.png",
+        "selectedIconPath": "images/clock-fill.png",
+        "text": "开始"
+      },
+      {
+        "current": 2,
+        "pagePath": "pages/setting/setting",
+        "iconPath": "images/set-profile.png",
+        "selectedIconPath": "images/set-fill.png",
+        "text": "设置"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

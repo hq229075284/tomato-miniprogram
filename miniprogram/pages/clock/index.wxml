@@ -1,0 +1,21 @@
+<!-- miniprogram/pages/index/index.wxml -->
+<wxs module="tool">
+    function getBackgroundColor(stage){
+        switch(stage){
+            case 'processing':return 'canvas-container processing'
+            case 'rest':return 'canvas-container rest'
+            default:return 'canvas-container'
+        }
+    }
+    module.exports={
+        getBackgroundColor:getBackgroundColor
+    }
+</wxs>
+<view class="{{tool.getBackgroundColor(stage)}}">
+    <canvas type="2d" style="width:{{width}}px;height:{{height}}px;margin:0 auto;" id='myCanvas' bind:tap="tapCanvas"></canvas>
+</view>
+<view class="task-list">
+    <view class="task" wx:for="{{taskList}}" wx:for-item="task" wx:key="id">
+        <text class="task-name">{{task.name}}</text>
+    </view>
+</view>
